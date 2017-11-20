@@ -1,0 +1,12 @@
+文件夹 PATH 列表
+卷序列号为 00000072 D29A:83C2
+F:.
+│  .gitattributes
+│  .gitignore
+│  head.png
+│  list
+│  
+└─clustering
+        city.txt
+        TestData.txt
+        
