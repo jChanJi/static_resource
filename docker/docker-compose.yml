@@ -5,28 +5,28 @@ services:
   ghost-app:
     build: ghost
     networks:
-      - ghost
+    - ghost
     depends_on:
-      - db
+    - db
     ports:
-      - "2368:2368"
+    - "2368:2368"
   nginx:
     build: nginx
     networks:
-      - ghost
+    - ghost
     depends_on:
-      - ghost-app
+    - ghost-app
     ports:
-      - "80:80"
+    - "80:80"
   db:
     image: "mysql:5.7.15"
     networks:
-      - ghost
+    - ghost
     environment:
       MYSQL_ROOT_PASSWORD: mysqlroot
       MYSQL_USER: ghost
       MYSQL_PASSWORD: ghost
     volumes:
-      - $PWD/data:/var/lib/mysql
+    - $PWD/data:/var/lib/mysql
     ports:
-      - "3360:3360"
+    - "3360:3360"
